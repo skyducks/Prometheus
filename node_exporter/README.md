@@ -1,65 +1,65 @@
-## Node Exporter 0.16+ for Prometheus 监控展示看板
-#### Grafana v6.2.5 +  node_exporter 0.16 、node_exporter 0.17 、node_exporter 0.18 测试使用正常。
-使用 Node Exporter v0.18，以实用为主，精简优化重要指标进行展示。  
-包含：CPU 内存 磁盘 IO 网络 流量 温度等监控指标。  
-##### 截图
+## Node Exporter 0.16+ for Prometheus monitoring dashboard
+#### Tested on Grafana v6.2.5 + node_exporter 0.16, node_exporter 0.17, node_exporter 0.18
+Practically, Node Exporter v0.18 was mainly used for streamline and optimize important indicators for display.
+Includes: CPU, memory, disk IO, network traffic, temperature, and other monitoring indicators.
+##### Screenshot
 ![](https://github.com/starsliao/Prometheus/raw/master/node_exporter/Node_Exporter.png)
-##### 关注公众号【**全栈运维开发 Python & Vue**】获取更多...
+##### 关注公众号【**全栈运维开发 Python & Vue**】 more...
 ![](https://raw.githubusercontent.com/starsliao/Prometheus/master/qr.png)
-#### 注意事项：
-##### 需要安装饼图的插件：
+#### Caution：
+##### Need to install Pie chart plugin：
 ```
 grafana-cli plugins install grafana-piechart-panel
-# 请确保安装后能正常添加饼图。
+# Please make sure that you can add a pie chart after installation.
 ```
 
-#### 请根据实际情况在grafana该面板的设置中配置好变量后使用：
+#### Please configure the variables in grafana panel according to the actual situation of use：
 
-- **必须：`$node`取值node_exporter的`instance`，IP+端口格式。该看板大部分查询关联了这个变量，请确保该变量有效**：
-  - 注意：在Prometheus中使用`count(node_exporter_build_info) by(instance,version)`查询各node的instance格式和版本。
+- **Must-do：`$node` takes the value of `instance` from node_exporter, IP+port number format. Most of the panel queries are associated with this variable, please make sure the variable is valid**：
+  - Caution：Use the query `count(node_exporter_build_info) by(instance,version)` in Prometheus to check instance format and version of each node.
 ```
-跟$name关联查询：
+Query with $name：
 label_values(node_exporter_build_info{name='$name'},instance)
 
-如果您无法获取$name,可修改成：
++If you can't get $name, you can modify into:
 label_values(node_exporter_build_info,instance)
 ```
 ---
-- 重要：`$maxmount`用于根据`$node`来查询当前主机的最大分区挂载点。
+- Important：`$maxmount` is used to query the maximum partition mount points based on the current host of `$node`.
 ```
 query_result(topk(1,sort_desc (max(node_filesystem_size_bytes{instance=~'$node',fstype=~"ext4|xfs"}) by (mountpoint))))
 ```
 ---
-- 可选：`$env`自定义的各主机环境：
+- Optional：`$env` is custom host environment：
 ```
 label_values(node_exporter_build_info,env)
 ```
 ---
-- 可选：`$name`自定义的主机名称。（跟`$env`关联）：
+- Optional：`$name` is user defined hostname.（It is related with `$env`）：
 ```
 label_values(node_exporter_build_info{env='$env'},name)
 ```
 ### 【update】：
 ##### 2019/7/1
-1. 增加了磁盘分区的使用率曲线图。
-2. 优化了数据展示效果。
-3. 使用Grafana 6.2.5 测试使用正常。
+1. Usage graph for disk partitions was added.
+2. Optimized data display performance.
+3. Usabiliy test on Grafana 6.2.5
 ##### 2019/5/20
-1. 增加了服务器列表多选支持，曲线图可以展示多台服务器的数据。
-2. 优化了变量的展示效果。
+1. Multi-select support in server list was added, and graphs can display data from multiple servers.
+2. Optimized display of variables.
 3. 优化了部分监控指标的描述说明，点击各图表左上角的“i”即可查看。
 ##### 2019/1/9
-1. 修复了一个展示内存使用量不准确的bug。
-2. 增加了更新node_exporter和仪表板的外链。
-3. Grafana v5.4.2 + node_exporter 0.16 、node_exporter 0.17 测试使用正常。
+1. Fixed a bug that showed inaccurate memory usage.
+2. Additional updates for node_exporter instrument panel and external chain.
+3. Tested on Grafana v5.4.2 + node_exporter 0.16 、node_exporter 0.17
 ##### 11/16
-1. 增加了变量的说明。
-2. 优化了新安装看板后的展示速度。 
++1. Descriptions of variables were added.
++2. Display speed was optimized after install new panels.
 ##### 11/15  
-1. 增加各环境对服务器分组。
-2. 增加饼图，磁盘总空间。
-3. 增加当前打开文件描述符。
-4. 增加部分监控指标的描述。
-5. 优化部分指标的显示结果。
+1. Environment for each server group was added.
+2. Pie chart with total disk space was added.
+3. Currently opened file descriptor was added.
+4. Descriptions of some monitoring indicators were added.
+5. Optimized display results of some indicators.
 ##### 11/13  
-1. 增加磁盘每秒的I/O操作耗费时间占比图形。  
+1. Disk I/O operations per second with time-consuming ratio graph were added.

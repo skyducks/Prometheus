@@ -240,7 +240,7 @@
           "refId": "A"
         }
       ],
-      "title": "服务连通性统计",
+      "title": "Service Connectivity Statistics",
       "type": "grafana-piechart-panel",
       "valueName": "current"
     },
@@ -486,7 +486,7 @@
           "unit": "short"
         },
         {
-          "alias": "连通性",
+          "alias": "Connectivity",
           "colorMode": "cell",
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -506,11 +506,11 @@
           "unit": "short",
           "valueMaps": [
             {
-              "text": "在线",
+              "text": "Online",
               "value": "1"
             },
             {
-              "text": "离线",
+              "text": "Offline",
               "value": "0"
             }
           ]
@@ -635,7 +635,7 @@
           "refId": "D"
         }
       ],
-      "title": "$job Blackbox 状态明细",
+      "title": "$job Blackbox Status Details",
       "transform": "table",
       "type": "table"
     }
@@ -911,7 +911,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "1 Blackbox Exporter 0.14 for Prometheus 监控展示看板",
+  "title": "1 Blackbox Exporter 0.14 for Prometheus Monitoring Dashboard",
   "uid": "ynUxXflik",
   "version": 28
 }

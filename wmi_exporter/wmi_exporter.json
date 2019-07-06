@@ -217,7 +217,7 @@
         }
       ],
       "thresholds": "80,90",
-      "title": "CPU使用率",
+      "title": "CPU usage",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -297,7 +297,7 @@
         }
       ],
       "thresholds": "80,90",
-      "title": "内存使用率",
+      "title": "Memory usage",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -377,7 +377,7 @@
         }
       ],
       "thresholds": "80,90",
-      "title": "磁盘使用率",
+      "title": "Disk usage",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -467,7 +467,7 @@
         }
       ],
       "thresholds": "70000000,90000000",
-      "title": "带宽使用率",
+      "title": "Bandwidth usage",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -612,7 +612,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "内存详情",
+      "title": "Memory details",
       "tooltip": {
         "shared": false,
         "sort": 0,
@@ -904,7 +904,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "CPU负载（16核）",
+      "title": "CPU load (16 cores)",
       "tooltip": {
         "shared": false,
         "sort": 0,
@@ -995,7 +995,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "CPU使用率",
+      "title": "CPU usage",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1091,7 +1091,7 @@
           "item": {
             "filter": ""
           },
-          "legendFormat": "Sent-上传",
+          "legendFormat": "Sent-Upload",
           "metric": "mysql_global_status_questions",
           "mode": 0,
           "options": {
@@ -1118,7 +1118,7 @@
           "item": {
             "filter": ""
           },
-          "legendFormat": "Received-下载",
+          "legendFormat": "Received-Download",
           "metric": "mysql_global_status_questions",
           "mode": 0,
           "options": {
@@ -1132,7 +1132,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "网络详情",
+      "title": "Network details",
       "tooltip": {
         "shared": true,
         "sort": 2,
@@ -1215,7 +1215,7 @@
           "format": "time_series",
           "interval": "1h",
           "intervalFactor": 1,
-          "legendFormat": "Received-下载",
+          "legendFormat": "Received-Download",
           "refId": "A"
         },
         {
@@ -1223,7 +1223,7 @@
           "format": "time_series",
           "interval": "1h",
           "intervalFactor": 1,
-          "legendFormat": "Sent-上传",
+          "legendFormat": "Sent-Upload",
           "refId": "B"
         }
       ],
@@ -1231,7 +1231,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "每小时流量",
+      "title": "Hourly flow",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1326,7 +1326,7 @@
           "item": {
             "filter": ""
           },
-          "legendFormat": "Sent-上传",
+          "legendFormat": "Sent-Upload",
           "metric": "mysql_global_status_questions",
           "mode": 0,
           "options": {
@@ -1353,7 +1353,7 @@
           "item": {
             "filter": ""
           },
-          "legendFormat": "Received-下载",
+          "legendFormat": "Received-Download",
           "metric": "mysql_global_status_questions",
           "mode": 0,
           "options": {
@@ -1505,7 +1505,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "每秒磁盘读写",
+      "title": "Disk read/write per second",
       "tooltip": {
         "shared": false,
         "sort": 0,
@@ -1614,7 +1614,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "分区剩余空间",
+      "title": "Partition free space",
       "tooltip": {
         "shared": false,
         "sort": 0,

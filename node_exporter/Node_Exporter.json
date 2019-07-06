@@ -77,7 +77,7 @@
       "icon": "external link",
       "tags": [],
       "targetBlank": true,
-      "title": "更新node_exporter",
+      "title": "Update node_exporter",
       "tooltip": "",
       "type": "link",
       "url": "https://github.com/prometheus/node_exporter/releases"
@@ -86,7 +86,7 @@
       "icon": "external link",
       "tags": [],
       "targetBlank": true,
-      "title": "更新仪表板",
+      "title": "Update dashboard",
       "tooltip": "",
       "type": "link",
       "url": "https://grafana.com/dashboards/8919"
@@ -189,7 +189,7 @@
         }
       ],
       "thresholds": "1,2",
-      "title": "系统运行时间",
+      "title": "System uptime",
       "transparent": false,
       "type": "singlestat",
       "valueFontSize": "100%",
@@ -276,7 +276,7 @@
         }
       ],
       "thresholds": "1,2",
-      "title": "CPU 核数",
+      "title": "CPU count",
       "type": "singlestat",
       "valueFontSize": "100%",
       "valueMaps": [
@@ -363,7 +363,7 @@
         }
       ],
       "thresholds": "50,80",
-      "title": "CPU使用率（5m）",
+      "title": "CPU usage rate(5m)",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -537,7 +537,7 @@
         }
       ],
       "thresholds": "80,90",
-      "title": "内存使用率",
+      "title": "Memory usage",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [],
@@ -619,7 +619,7 @@
         }
       ],
       "thresholds": "7000,9000",
-      "title": "当前打开的文件描述符",
+      "title": "Currently opened file descriptor",
       "transparent": false,
       "type": "singlestat",
       "valueFontSize": "70%",
@@ -700,7 +700,7 @@
         }
       ],
       "thresholds": "70,90",
-      "title": "根分区使用率",
+      "title": "root partition usage",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -787,7 +787,7 @@
         }
       ],
       "thresholds": "70,90",
-      "title": "最大分区($maxmount)使用率",
+      "title": "Maximum partition ($maxmount) usage",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -887,9 +887,9 @@
     },
     {
       "aliasColors": {
-        "15分钟": "#6ED0E0",
-        "1分钟": "#BF1B00",
-        "5分钟": "#CCA300"
+        "15 minutes": "#6ED0E0",
+        "1 minute": "#BF1B00",
+        "5 minutes": "#CCA300"
       },
       "bars": false,
       "dashLength": 10,
@@ -970,7 +970,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "系统平均负载",
+      "title": "System average load",
       "tooltip": {
         "msResolution": false,
         "shared": true,
@@ -1056,7 +1056,7 @@
           "refId": "A"
         }
       ],
-      "title": "磁盘总空间",
+      "title": "Total disk space",
       "type": "grafana-piechart-panel",
       "valueName": "current"
     },
@@ -1087,7 +1087,7 @@
           "type": "hidden"
         },
         {
-          "alias": "分区",
+          "alias": "Partition",
           "colorMode": null,
           "colors": [
             "rgba(50, 172, 45, 0.97)",
@@ -1105,7 +1105,7 @@
           "unit": "bytes"
         },
         {
-          "alias": "可用空间",
+          "alias": "Available space",
           "colorMode": "value",
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1124,7 +1124,7 @@
           "unit": "bytes"
         },
         {
-          "alias": "使用率",
+          "alias": "Usage rate",
           "colorMode": "cell",
           "colors": [
             "rgba(50, 172, 45, 0.97)",
@@ -1143,7 +1143,7 @@
           "unit": "percentunit"
         },
         {
-          "alias": "总空间",
+          "alias": "Total space",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1160,7 +1160,7 @@
           "unit": "bytes"
         },
         {
-          "alias": "文件系统",
+          "alias": "File system",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1248,7 +1248,7 @@
           "refId": "D"
         }
       ],
-      "title": "各分区可用空间",
+      "title": "Space available for each partition",
       "transform": "table",
       "transparent": false,
       "type": "table"
@@ -1261,7 +1261,7 @@
         "iowait": "#EAB839",
         "irq": "#BF1B00",
         "nice": "#C15C17",
-        "sdb_每秒I/O操作%": "#d683ce",
+		"sdb_I/O_opertaions_per_second%": "#d683ce",										  
         "softirq": "#E24D42",
         "steal": "#FCE2DE",
         "system": "#508642",
@@ -1355,7 +1355,7 @@
           "expr": "irate(node_disk_io_time_seconds_total{instance=~\"$node\"}[1m])",
           "format": "time_series",
           "intervalFactor": 1,
-          "legendFormat": "{{instance}}_{{device}}_每秒I/O操作%",
+          "legendFormat": "{{instance}}_{{device}}_I/O_opertaions_per_second%",
           "refId": "C"
         }
       ],
@@ -1363,7 +1363,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "CPU使用率、磁盘每秒的I/O操作耗费时间（%）",
+      "title": "CPU usage, disk I/O operations per second (%)",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1404,13 +1404,13 @@
     },
     {
       "aliasColors": {
-        "内存_Avaliable": "#6ED0E0",
-        "内存_Cached": "#EF843C",
-        "内存_Free": "#629E51",
-        "内存_Total": "#6d1f62",
-        "内存_Used": "#eab839",
-        "可用": "#9ac48a",
-        "总内存": "#bf1b00"
+        "RAM_Avaliable": "#6ED0E0",
+        "RAM_Cached": "#EF843C",
+        "RAM_Free": "#629E51",
+        "RAM_Total": "#6d1f62",
+        "RAM_Used": "#eab839",
+        "Available": "#9ac48a",
+        "Total memory": "#bf1b00"
       },
       "bars": false,
       "dashLength": 10,
@@ -1458,7 +1458,7 @@
           "hide": false,
           "instant": false,
           "intervalFactor": 2,
-          "legendFormat": "{{instance}}_总内存",
+          "legendFormat": "{{instance}}_total_memory",
           "refId": "A",
           "step": 4
         },
@@ -1467,7 +1467,7 @@
           "format": "time_series",
           "hide": false,
           "intervalFactor": 2,
-          "legendFormat": "{{instance}}_已用",
+          "legendFormat": "{{instance}}_used",
           "refId": "B",
           "step": 4
         },
@@ -1476,7 +1476,7 @@
           "format": "time_series",
           "hide": true,
           "intervalFactor": 2,
-          "legendFormat": "内存_Free",
+          "legendFormat": "RAM_Free",
           "refId": "C",
           "step": 4
         },
@@ -1485,7 +1485,7 @@
           "format": "time_series",
           "hide": true,
           "intervalFactor": 2,
-          "legendFormat": "内存_Buffers",
+          "legendFormat": "RAM_Buffers",
           "refId": "D",
           "step": 4
         },
@@ -1494,7 +1494,7 @@
           "format": "time_series",
           "hide": true,
           "intervalFactor": 2,
-          "legendFormat": "内存_Cached",
+          "legendFormat": "RAM_Cached",
           "refId": "E",
           "step": 4
         },
@@ -1504,7 +1504,7 @@
           "hide": false,
           "interval": "",
           "intervalFactor": 2,
-          "legendFormat": "{{instance}}_可用",
+          "legendFormat": "{{instance}}_available",
           "refId": "F",
           "step": 4
         },
@@ -1520,7 +1520,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "内存信息",
+      "title": "Memory information",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1599,7 +1599,7 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "alias": "/.*_读取$/",
+          "alias": "/.*_read$/",
           "transform": "negative-Y"
         }
       ],
@@ -1613,7 +1613,7 @@
           "hide": false,
           "interval": "",
           "intervalFactor": 2,
-          "legendFormat": "{{instance}}_{{device}}_读取",
+          "legendFormat": "{{instance}}_{{device}}_read",
           "refId": "A",
           "step": 10
         },
@@ -1622,7 +1622,7 @@
           "format": "time_series",
           "hide": false,
           "intervalFactor": 2,
-          "legendFormat": "{{instance}}_{{device}}_写入",
+          "legendFormat": "{{instance}}_{{device}}_write",
           "refId": "B",
           "step": 10
         },
@@ -1640,7 +1640,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "磁盘读写速率（IOPS）",
+      "title": "Disk Read Rate (IOPS)",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1658,7 +1658,7 @@
         {
           "decimals": null,
           "format": "iops",
-          "label": "读取（-）/写入（+）I/O ops/sec",
+          "label": "Read (-) / write (+) I/O ops/sec",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -1718,7 +1718,7 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "alias": "/.*_读取$/",
+          "alias": "/.*_read$/",
           "transform": "negative-Y"
         }
       ],
@@ -1731,7 +1731,7 @@
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
-          "legendFormat": "{{instance}}_{{device}}_读取",
+          "legendFormat": "{{instance}}_{{device}}_read",
           "refId": "A",
           "step": 10
         },
@@ -1740,7 +1740,7 @@
           "format": "time_series",
           "hide": false,
           "intervalFactor": 2,
-          "legendFormat": "{{instance}}_{{device}}_写入",
+          "legendFormat": "{{instance}}_{{device}}_write",
           "refId": "B",
           "step": 10
         }
@@ -1749,7 +1749,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "磁盘读写容量大小",
+      "title": "Disk read and write capacity size",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1767,7 +1767,7 @@
         {
           "decimals": null,
           "format": "Bps",
-          "label": "读取（-）/写入（+）",
+          "label": "Read (-) / write (+)",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -1827,7 +1827,7 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "alias": "/,*_读取$/",
+          "alias": "/,*_read$/",
           "transform": "negative-Y"
         }
       ],
@@ -1850,7 +1850,7 @@
           "format": "time_series",
           "hide": true,
           "intervalFactor": 1,
-          "legendFormat": "{{device}}_加权",
+          "legendFormat": "{{device}}_weighted",
           "refId": "D"
         },
         {
@@ -1859,7 +1859,7 @@
           "hide": false,
           "interval": "",
           "intervalFactor": 1,
-          "legendFormat": "{{instance}}_{{device}}_读取",
+          "legendFormat": "{{instance}}_{{device}}_read",
           "refId": "B"
         },
         {
@@ -1867,7 +1867,7 @@
           "format": "time_series",
           "hide": false,
           "intervalFactor": 1,
-          "legendFormat": "{{instance}}_{{device}}_写入",
+          "legendFormat": "{{instance}}_{{device}}_write",
           "refId": "C"
         }
       ],
@@ -1875,7 +1875,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "磁盘IO读写时间",
+      "title": "Disk IO read and write time",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1892,7 +1892,7 @@
       "yaxes": [
         {
           "format": "s",
-          "label": "读取（-）/写入（+）",
+          "label": "Read (-) / write (+)",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -1963,7 +1963,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "分时磁盘使用率",
+      "title": "Time-sharing disk usage",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -2040,7 +2040,7 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "alias": "/.*_out上传$/",
+          "alias": "/.*_out_upload$/",
           "transform": "negative-Y"
         }
       ],
@@ -2052,7 +2052,7 @@
           "expr": "irate(node_network_receive_bytes_total{instance=~'$node',device!~'tap.*|veth.*|br.*|docker.*|virbr*|lo*'}[5m])*8",
           "format": "time_series",
           "intervalFactor": 2,
-          "legendFormat": "{{instance}}_{{device}}_in下载",
+          "legendFormat": "{{instance}}_{{device}}_in_download",
           "refId": "A",
           "step": 4
         },
@@ -2060,7 +2060,7 @@
           "expr": "irate(node_network_transmit_bytes_total{instance=~'$node',device!~'tap.*|veth.*|br.*|docker.*|virbr*|lo*'}[5m])*8",
           "format": "time_series",
           "intervalFactor": 2,
-          "legendFormat": "{{instance}}_{{device}}_out上传",
+          "legendFormat": "{{instance}}_{{device}}_out_upload",
           "refId": "B",
           "step": 4
         }
@@ -2069,7 +2069,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "网络流量",
+      "title": "Network traffic",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -2086,7 +2086,7 @@
       "yaxes": [
         {
           "format": "bps",
-          "label": "上传（-）/下载（+）",
+          "label": "Upload(-)/Download(+)",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -2199,7 +2199,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "TCP 连接情况",
+      "title": "TCP connection status",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -2289,7 +2289,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "硬件温度",
+      "title": "Hardware temperature",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -2418,7 +2418,7 @@
         "definition": "",
         "hide": 0,
         "includeAll": true,
-        "label": "环境",
+        "label": "Environment",
         "multi": true,
         "multiFormat": "regex values",
         "name": "env",
@@ -2442,7 +2442,7 @@
         "definition": "label_values(node_exporter_build_info{env=~'$env'},name)",
         "hide": 0,
         "includeAll": true,
-        "label": "主机名",
+        "label": "CPU name",
         "multi": true,
         "multiFormat": "regex values",
         "name": "name",
@@ -2466,7 +2466,7 @@
         "definition": "label_values(node_exporter_build_info{name=~'$name'},instance)",
         "hide": 0,
         "includeAll": true,
-        "label": "IP( 主机名多选时,该项请选ALL)",
+        "label": "IP (when the host name is selected, select ALL for this item)",
         "multi": true,
         "multiFormat": "regex values",
         "name": "node",
@@ -2546,7 +2546,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "1 Node Exporter 0.16+ for Prometheus 监控展示看板",
+  "title": "1 Node Exporter 0.16+ for Prometheus monitoring dashboard",
   "uid": "9CWBz0bik",
   "version": 65
 }
